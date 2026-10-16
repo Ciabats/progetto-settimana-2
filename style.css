@@ -29,6 +29,9 @@ button {
   background: none;
 }
 
+
+/* Scrivi qui sotto i tuoi stili */
+
 #search-container{
   gap: 10px;
 }
@@ -59,6 +62,31 @@ button {
   border-radius: 5px;
 }
 
+/* footer */
 
+#footer{
 
-/* Scrivi qui sotto i tuoi stili */
+  color: white;
+  padding: 40px 24px;
+  margin-top: 40px;
+  background-color: #232F3E;
+}
+
+#footer div{
+  display: inline-block;
+  margin-right: 150px;
+}
+
+#footer div:first-child{
+  margin-left: 20px;
+}
+
+.footer-list{
+  text-decoration: none;
+  list-style: none;
+}
+
+.footer-list a:hover{
+  cursor: pointer;
+  text-decoration: underline;
+}
