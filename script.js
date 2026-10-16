@@ -22,6 +22,7 @@ const products = [  //creo l'array di oggetti
       categoria: "Elettronica",
       prezzo: 59.9,
       rating: 4,
+      immagine: "link.jpg",
       disponibile: true,
    },
 
@@ -30,6 +31,7 @@ const products = [  //creo l'array di oggetti
       categoria: "Accessori",
       prezzo: 34.5,
       rating: 5,
+      immagine: "link.jpg",
       disponibile: true,
    },
 
@@ -38,6 +40,7 @@ const products = [  //creo l'array di oggetti
       categoria: "Casa",
       prezzo: 18.0,
       rating: 3,
+      immagine: "link.jpg",
       disponibile: false,
    },
 
@@ -46,6 +49,7 @@ const products = [  //creo l'array di oggetti
       categoria: "Casa",
       prezzo: 42.0,
       rating: 4,
+      immagine: "link.jpg",
       disponibile: true,
    },
 
@@ -54,6 +58,7 @@ const products = [  //creo l'array di oggetti
       categoria: "Elettronica",
       prezzo: 129.0,
       rating: 4,
+      immagine: "link.jpg",
       disponibile: false,
    },
 
@@ -62,6 +67,7 @@ const products = [  //creo l'array di oggetti
       categoria: "Abbigliamento",
       prezzo: 49.9,
       rating: 3,
+      immagine: "link.jpg",
       disponibile: true,
    },
 
@@ -70,6 +76,7 @@ const products = [  //creo l'array di oggetti
       categoria: "Abbigliamento",
       prezzo: 89.0,
       rating: 5,
+      immagine: "link.jpg",
       disponibile: true,
    },
 
@@ -78,6 +85,7 @@ const products = [  //creo l'array di oggetti
       categoria: "Cancelleria",
       prezzo: 7.5,
       rating: 4,
+      immagine: "link.jpg",
       disponibile: true,
    },
 
@@ -86,6 +94,7 @@ const products = [  //creo l'array di oggetti
       categoria: "Cancelleria",
       prezzo: 24.0,
       rating: 2,
+      immagine: "link.jpg",
       disponibile: false,
    },
 
@@ -94,6 +103,7 @@ const products = [  //creo l'array di oggetti
       categoria: "Elettronica",
       prezzo: 39.9,
       rating: 5,
+      immagine: "link.jpg",
       disponibile: true,
    },
 
@@ -118,6 +128,7 @@ const products = [  //creo l'array di oggetti
       categoria: "Sport",
       prezzo: 29.9,
       rating: 3,
+      immagine: "link.jpg",
       disponibile: false,
    }
 ]
@@ -132,17 +143,14 @@ console.table(products);
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-function formattaPrezzzo(prezzo) {
+function formattaPrezzo(prezzo) {
 
-   for (let i = 0; i < products.length; i++) {
-      
-      const price = array[i].prezzo;
-      
-   }
-     
-   
+   return prezzo.toFixed(2);
 }
+for (let i = 0; i < products.length; i++) {
+   console.log(`${products[i].nome}: € ${formattaPrezzo(products[i].prezzo)}`);
 
+}
 
 /* VERSIONE INTERMEDIA — stelline(rating)
    Funzione che ritorna una stringa di stelline piene/vuote.
@@ -150,13 +158,56 @@ function formattaPrezzzo(prezzo) {
    Esempio in console.log: Monitor: rating 3 → "★★★☆☆"
 */
 
+
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+
+function stelline(rating) { //creo funzione
+
+      switch (true) { 
+         case rating === 1:
+            return "★☆☆☆☆"
+            break;
+
+         case rating === 2:
+            return "★★☆☆☆"
+            break;
+
+         case rating === 3:
+            return "★★★☆☆"
+            break;
+
+         case rating === 4:
+            return "★★★★☆"
+            break;
+
+         case rating === 5:
+            return "★★★★★"
+            break;
+
+             default:
+               return "senza rating";
+      }  
+     
+   }
+
+for (let i = 0; i < products.length; i++) {
+   console.log(`${products[i].nome}: rating ${products[i].rating} → ${stelline(products[i].rating)}`);
+   
+}
 
 /* VERSIONE INTERMEDIA — Filtro per categoria
    Funzione che riceve il parametro categoria e filtra l'array prodotti mostrando solo i prodotti della categoria ricevuta
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+function category(categoria){
+   for (let i = 0; i < products.length; i++) {
+      const element = array[i];
+      
+   }
+}
 
 /* VERSIONE INTERMEDIA — Filtro disponibilità e rating
    Funzione che genera un array filtrato dall'array prodotti, mostrando soltanto i prodotti disponibili con rating >= 3
