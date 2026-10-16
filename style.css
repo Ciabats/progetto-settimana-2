@@ -32,39 +32,92 @@ button {
 
 /* Scrivi qui sotto i tuoi stili */
 
-#search-container{
+/* stilizzo header */
+
+.site-header {
+  background-color: #131921;
+  padding: 10px 24px;
+  color: white;
+
+}
+
+#search-container {
   gap: 10px;
 }
 
 
 /* stilizzo logo amazon e aggiungo effetto hover */
-.logo{
+.logo {
   display: inline-block;
   color: #E18904;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 26px;
+  margin-right: 15px;
 }
 
-.logo:hover{
+.logo:hover {
   cursor: pointer;
 }
 
-#barra-ricerca{
+/* div barra ricerca */
+.ricerca {
+  display: inline-block;
+  width: 55%;
+  margin-right: 20px;
+  max-width: 500px;
+  font-size: 15px;
 
 }
 
-#search{
-    font-family: inherit;
-  cursor: pointer;
-  border: 1px solid #FEBD69;
-  background-color: #FEBD69;
-  padding: 4px 6px;
+#barra-ricerca {
+  display: inline-block;
+  width: 80%;
+  padding: 4px 0px 4px 12px;
+  margin-right: 0;
+  border: none;
   border-radius: 5px;
+  vertical-align: middle;
 }
+
+#search {
+  font-family: inherit;
+  cursor: pointer;
+  width: 10%;
+  border: none;
+  background-color: #FEBD69;
+  padding: 4px 6px 4px 0;
+  border-radius: 5px;
+  font-weight: bold;
+  vertical-align: middle;
+}
+
+/* div link account, carrello, ordini */
+
+.header-links{
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.header-links a{
+  margin-right: 15px;
+}
+.header-links a:hover{
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.header-links.carrello{
+  background: #232F3E;
+  border: 1px solid;
+  padding: 4px;
+}
+/* fine stilizzazione header */
+
 
 /* footer */
 
-#footer{
+#footer {
 
   color: white;
   padding: 40px 24px;
@@ -72,21 +125,21 @@ button {
   background-color: #232F3E;
 }
 
-#footer div{
+#footer div {
   display: inline-block;
   margin-right: 150px;
 }
 
-#footer div:first-child{
+#footer div:first-child {
   margin-left: 20px;
 }
 
-.footer-list{
+.footer-list {
   text-decoration: none;
   list-style: none;
 }
 
-.footer-list a:hover{
+.footer-list a:hover {
   cursor: pointer;
   text-decoration: underline;
 }
