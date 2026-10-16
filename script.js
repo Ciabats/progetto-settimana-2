@@ -16,6 +16,114 @@ REGOLE
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+const products = [  //creo l'array di oggetti
+   {
+      nome: "Cuffie",
+      categoria: "Elettronica",
+      prezzo: 59.9,
+      rating: 4,
+      disponibile: true,
+   },
+
+   {
+      nome: "Zaino ",
+      categoria: "Accessori",
+      prezzo: 34.5,
+      rating: 5,
+      disponibile: true,
+   },
+
+   {
+      nome: "Tazza ",
+      categoria: "Casa",
+      prezzo: 18.0,
+      rating: 3,
+      disponibile: false,
+   },
+
+   {
+      nome: "Lampada",
+      categoria: "Casa",
+      prezzo: 42.0,
+      rating: 4,
+      disponibile: true,
+   },
+
+   {
+      nome: "Smartwatch",
+      categoria: "Elettronica",
+      prezzo: 129.0,
+      rating: 4,
+      disponibile: false,
+   },
+
+   {
+      nome: "Sneakers",
+      categoria: "Abbigliamento",
+      prezzo: 49.9,
+      rating: 3,
+      disponibile: true,
+   },
+
+   {
+      nome: "Impermeabile ",
+      categoria: "Abbigliamento",
+      prezzo: 89.0,
+      rating: 5,
+      disponibile: true,
+   },
+
+   {
+      nome: "Quaderno a quadretti",
+      categoria: "Cancelleria",
+      prezzo: 7.5,
+      rating: 4,
+      disponibile: true,
+   },
+
+   {
+      nome: "Penna ",
+      categoria: "Cancelleria",
+      prezzo: 24.0,
+      rating: 2,
+      disponibile: false,
+   },
+
+   {
+      nome: "Mouse ",
+      categoria: "Elettronica",
+      prezzo: 39.9,
+      rating: 5,
+      disponibile: true,
+   },
+
+   {
+      nome: "Vaso",
+      categoria: "Casa",
+      prezzo: 15.0,
+      rating: 4,
+      disponibile: true,
+   },
+
+   {
+      nome: "Borraccia in acciaio",
+      categoria: "Sport",
+      prezzo: 22.5,
+      rating: 5,
+      disponibile: true,
+   },
+
+   {
+      nome: "Tappetino yoga",
+      categoria: "Sport",
+      prezzo: 29.9,
+      rating: 3,
+      disponibile: false,
+   }
+]
+
+console.log(products); //stampo il risultato
+console.table(products);
 
 /* VERSIONE INTERMEDIA — formattaPrezzo(prezzo)
    Funzione che ritorna una stringa tipo "€ 19,99".
@@ -23,6 +131,17 @@ REGOLE
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+function formattaPrezzzo(prezzo) {
+
+   for (let i = 0; i < products.length; i++) {
+      
+      const price = array[i].prezzo;
+      
+   }
+     
+   
+}
 
 
 /* VERSIONE INTERMEDIA — stelline(rating)
