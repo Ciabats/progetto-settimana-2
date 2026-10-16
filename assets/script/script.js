@@ -145,7 +145,7 @@ console.table(products);
 
 function formattaPrezzo(prezzo) {
 
-   return prezzo.toFixed(2);
+   return prezzo.toFixed(2).replace(".", ",");
 }
 for (let i = 0; i < products.length; i++) {
    console.log(`${products[i].nome}: € ${formattaPrezzo(products[i].prezzo)}`);
@@ -224,15 +224,15 @@ console.log(category("sport"));
 
 function productFilter() {
 
-  const available = [];
+   const available = [];
 
-  for (let i = 0; i < products.length; i++) {
-    if (products[i].disponibile === true && products[i].rating >= 3) {
-      available.push(products[i]);
-    }
-  }
+   for (let i = 0; i < products.length; i++) {
+      if (products[i].disponibile === true && products[i].rating >= 3) {
+         available.push(products[i]);
+      }
+   }
 
-  return available;
+   return available;
 }
 
 console.log(productFilter());
@@ -244,6 +244,32 @@ console.log(productFilter());
    Funzione che, dato un array di prodotti, genera la griglia nel DOM.
    Niente HTML hard-coded per i prodotti: tutto generato dal JavaScript.
 */
+
+function renderProdotti(lista) {
+   const corpo = document.getElementById("corpo");
+
+   for (let i = 0; i < lista.length; i++) {
+      const prodotto = lista[i];
+      const riga = document.createElement("tr");
+      const valori = [
+         prodotto.nome,
+         prodotto.categoria,
+         `€ ${formattaPrezzo(prodotto.prezzo)}`,
+         `${stelline(prodotto.rating)}`,
+         prodotto.immagine,
+         prodotto.disponibile,
+      ];
+      for (let j = 0; j < valori.length; j++) {
+         const cella = document.createElement("td");
+         cella.textContent = valori[j];
+         riga.appendChild(cella);
+      }
+
+      corpo.appendChild(riga);
+   }
+}
+
+renderProdotti(products);
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
