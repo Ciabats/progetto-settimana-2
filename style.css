@@ -29,4 +29,36 @@ button {
   background: none;
 }
 
+#search-container{
+  gap: 10px;
+}
+
+
+/* stilizzo logo amazon e aggiungo effetto hover */
+.logo{
+  display: inline-block;
+  color: #E18904;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.logo:hover{
+  cursor: pointer;
+}
+
+#barra-ricerca{
+
+}
+
+#search{
+    font-family: inherit;
+  cursor: pointer;
+  border: 1px solid #FEBD69;
+  background-color: #FEBD69;
+  padding: 4px 6px;
+  border-radius: 5px;
+}
+
+
+
 /* Scrivi qui sotto i tuoi stili */
