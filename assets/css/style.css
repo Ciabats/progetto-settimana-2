@@ -351,10 +351,15 @@ table{
 
 }
 
+tr:nth-child(even){
+  background-color: #fff23f;
+}
+
 td{
   border:0.5px solid black;
   padding: 5px;
 }
+
 
 th{
   border-right: 1px solid black;
