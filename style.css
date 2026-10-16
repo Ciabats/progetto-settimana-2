@@ -107,9 +107,9 @@ button {
   text-decoration: underline;
 }
 
-.header-links.carrello{
+#carrello{
   background: #232F3E;
-  border: 1px solid;
+  border-radius: 4px;
   padding: 4px;
 }
 /* fine stilizzazione header */
@@ -143,13 +143,73 @@ main{
 
 .cat h2{
   font-size: 20px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 /* lavoro sulle card */
 
 .card{
-  
+  display: inline-block;
+  margin-bottom: 30px;
+  margin-right: 5px;
+  width: 20%;
+  border-radius: 5px;
+  border: 1px solid;
+}
+
+.img{
+  height: 100px;
+  text-align: center;
+  line-height: 100px;
+overflow: hidden;
+}
+
+/* card elettronica */
+
+.img.elettronica{
+  font-size: 25px;
+  font-weight: 500;
+  background-color: #232F3E;
+  color: #fff;
+}
+
+/* card libri */
+
+.img.libri{
+  font-size: 50px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #C45500;
+}
+
+/* card abbigliamento */
+
+.img.abbigliamento{
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #146EB4;
+}
+
+/* card elettronica */
+
+.img.casa{
+  font-size: 50px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #067D62;
+}
+
+.dettagli h4{
+  padding-left: 5px;
+  font-size: 15px;
+}
+
+.dettagli a{
+  text-decoration: none;
+  font-size: 12px;
+  padding-left: 5px;
+  color: #1ea6afc5;
 }
 
 /* footer */
