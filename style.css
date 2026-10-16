@@ -38,6 +38,7 @@ button {
   background-color: #131921;
   padding: 10px 24px;
   color: white;
+  position: sticky; top: 0;
 
 }
 
@@ -93,25 +94,27 @@ button {
 
 /* div link account, carrello, ordini */
 
-.header-links{
+.header-links {
   display: inline-block;
   font-size: 14px;
   font-weight: 400;
 }
 
-.header-links a{
+.header-links a {
   margin-right: 15px;
 }
-.header-links a:hover{
+
+.header-links a:hover {
   cursor: pointer;
   text-decoration: underline;
 }
 
-#carrello{
+#carrello {
   background: #232F3E;
   border-radius: 4px;
   padding: 4px;
 }
+
 /* fine stilizzazione header */
 
 /* section hero */
@@ -123,50 +126,57 @@ button {
   color: white;
 }
 
-.hero h1{
+.hero h1 {
   font-size: 40px;
   margin-bottom: 10px;
 }
 
-.hero p{
+.hero p {
   font-size: 14px;
 }
+
 /* section hero conclusa */
 
 /* main */
 
-main{
-  max-width:100%;
+main {
+  max-width: 80%;
   margin: 0 auto;
   padding: 20px 20px;
 }
 
-.cat h2{
+.cat h2 {
   font-size: 20px;
   margin-bottom: 20px;
+  text-align: justify;
 }
 
 /* lavoro sulle card */
 
-.card{
+.card {
   display: inline-block;
   margin-bottom: 30px;
-  margin-right: 5px;
-  width: 20%;
+  margin-right: 15px;
+  width: 22%;
   border-radius: 5px;
   border: 1px solid;
 }
 
-.img{
+.card:hover{
+  transform: translateX(2px);
+  cursor: pointer;
+}
+
+.img {
   height: 100px;
   text-align: center;
   line-height: 100px;
-overflow: hidden;
+  overflow: hidden;
 }
 
 /* card elettronica */
 
-.img.elettronica{
+.img.elettronica {
   font-size: 25px;
   font-weight: 500;
   background-color: #232F3E;
@@ -175,7 +185,7 @@ overflow: hidden;
 
 /* card libri */
 
-.img.libri{
+.img.libri {
   font-size: 50px;
   font-weight: 600;
   color: #fff;
@@ -184,33 +194,73 @@ overflow: hidden;
 
 /* card abbigliamento */
 
-.img.abbigliamento{
+.img.abbigliamento {
   font-size: 20px;
   font-weight: 600;
   color: #fff;
-  background-color: #146EB4;
+  background-color: #007185;
+  ;
 }
 
 /* card elettronica */
 
-.img.casa{
+.img.casa {
   font-size: 50px;
   font-weight: 600;
   color: #fff;
   background-color: #067D62;
 }
 
-.dettagli h4{
+/* stilizzo i dettagli delle categorie */
+.dettagli h4 {
   padding-left: 5px;
   font-size: 15px;
 }
 
-.dettagli a{
+.dettagli a {
   text-decoration: none;
   font-size: 12px;
   padding-left: 5px;
   color: #1ea6afc5;
 }
+
+.dettagli a:hover{
+  color: #FF9900;
+  text-decoration: underline;
+
+}
+
+/* lavoro sui prodotti in evidenza */
+
+.prodotti h2{
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.product-card{
+  display: inline-block;
+  width: 22%;
+  margin-bottom: 20px;
+  margin-right: 15px;
+}
+
+
+
+
+
+.add-carr{
+  width: 100%;
+  background-color: #FFD814;
+  border-radius: 15px;
+  font-size: 12px;
+  padding: 2px 4px;
+  cursor: pointer;
+}
+
+
+
+
+
 
 /* footer */
 
