@@ -19,7 +19,7 @@ REGOLE
 const products = [  //creo l'array di oggetti
    {
       nome: "Cuffie",
-      categoria: "Elettronica",
+      categoria: "elettronica",
       prezzo: 59.9,
       rating: 4,
       immagine: "link.jpg",
@@ -28,7 +28,7 @@ const products = [  //creo l'array di oggetti
 
    {
       nome: "Zaino ",
-      categoria: "Accessori",
+      categoria: "accessori",
       prezzo: 34.5,
       rating: 5,
       immagine: "link.jpg",
@@ -37,7 +37,7 @@ const products = [  //creo l'array di oggetti
 
    {
       nome: "Tazza ",
-      categoria: "Casa",
+      categoria: "casa",
       prezzo: 18.0,
       rating: 3,
       immagine: "link.jpg",
@@ -46,7 +46,7 @@ const products = [  //creo l'array di oggetti
 
    {
       nome: "Lampada",
-      categoria: "Casa",
+      categoria: "casa",
       prezzo: 42.0,
       rating: 4,
       immagine: "link.jpg",
@@ -55,7 +55,7 @@ const products = [  //creo l'array di oggetti
 
    {
       nome: "Smartwatch",
-      categoria: "Elettronica",
+      categoria: "elettronica",
       prezzo: 129.0,
       rating: 4,
       immagine: "link.jpg",
@@ -64,7 +64,7 @@ const products = [  //creo l'array di oggetti
 
    {
       nome: "Sneakers",
-      categoria: "Abbigliamento",
+      categoria: "abbigliamento",
       prezzo: 49.9,
       rating: 3,
       immagine: "link.jpg",
@@ -73,7 +73,7 @@ const products = [  //creo l'array di oggetti
 
    {
       nome: "Impermeabile ",
-      categoria: "Abbigliamento",
+      categoria: "abbigliamento",
       prezzo: 89.0,
       rating: 5,
       immagine: "link.jpg",
@@ -82,7 +82,7 @@ const products = [  //creo l'array di oggetti
 
    {
       nome: "Quaderno a quadretti",
-      categoria: "Cancelleria",
+      categoria: "cancelleria",
       prezzo: 7.5,
       rating: 4,
       immagine: "link.jpg",
@@ -91,7 +91,7 @@ const products = [  //creo l'array di oggetti
 
    {
       nome: "Penna ",
-      categoria: "Cancelleria",
+      categoria: "cancelleria",
       prezzo: 24.0,
       rating: 2,
       immagine: "link.jpg",
@@ -100,7 +100,7 @@ const products = [  //creo l'array di oggetti
 
    {
       nome: "Mouse ",
-      categoria: "Elettronica",
+      categoria: "elettronica",
       prezzo: 39.9,
       rating: 5,
       immagine: "link.jpg",
@@ -109,7 +109,7 @@ const products = [  //creo l'array di oggetti
 
    {
       nome: "Vaso",
-      categoria: "Casa",
+      categoria: "casa",
       prezzo: 15.0,
       rating: 4,
       disponibile: true,
@@ -117,7 +117,7 @@ const products = [  //creo l'array di oggetti
 
    {
       nome: "Borraccia in acciaio",
-      categoria: "Sport",
+      categoria: "sport",
       prezzo: 22.5,
       rating: 5,
       disponibile: true,
@@ -125,7 +125,7 @@ const products = [  //creo l'array di oggetti
 
    {
       nome: "Tappetino yoga",
-      categoria: "Sport",
+      categoria: "sport",
       prezzo: 29.9,
       rating: 3,
       immagine: "link.jpg",
@@ -164,36 +164,36 @@ for (let i = 0; i < products.length; i++) {
 
 function stelline(rating) { //creo funzione
 
-      switch (true) { 
-         case rating === 1:
-            return "★☆☆☆☆"
-            break;
+   switch (true) {
+      case rating === 1:
+         return "★☆☆☆☆"
+         break;
 
-         case rating === 2:
-            return "★★☆☆☆"
-            break;
+      case rating === 2:
+         return "★★☆☆☆"
+         break;
 
-         case rating === 3:
-            return "★★★☆☆"
-            break;
+      case rating === 3:
+         return "★★★☆☆"
+         break;
 
-         case rating === 4:
-            return "★★★★☆"
-            break;
+      case rating === 4:
+         return "★★★★☆"
+         break;
 
-         case rating === 5:
-            return "★★★★★"
-            break;
+      case rating === 5:
+         return "★★★★★"
+         break;
 
-             default:
-               return "senza rating";
-      }  
-     
+      default:
+         return "senza rating";
    }
+
+}
 
 for (let i = 0; i < products.length; i++) {
    console.log(`${products[i].nome}: rating ${products[i].rating} → ${stelline(products[i].rating)}`);
-   
+
 }
 
 /* VERSIONE INTERMEDIA — Filtro per categoria
@@ -202,18 +202,41 @@ for (let i = 0; i < products.length; i++) {
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-function category(categoria){
+function category(categoria) {
+
+   const type = [];
    for (let i = 0; i < products.length; i++) {
-      const element = array[i];
-      
+      if (products[i].categoria === categoria) {
+         type.push(products[i]);
+      }
    }
+   return type;
 }
+
+console.log(category("sport"));
+
 
 /* VERSIONE INTERMEDIA — Filtro disponibilità e rating
    Funzione che genera un array filtrato dall'array prodotti, mostrando soltanto i prodotti disponibili con rating >= 3
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+function productFilter() {
+
+  const available = [];
+
+  for (let i = 0; i < products.length; i++) {
+    if (products[i].disponibile === true && products[i].rating >= 3) {
+      available.push(products[i]);
+    }
+  }
+
+  return available;
+}
+
+console.log(productFilter());
+
 
 /* --------------------------------------------------------------
 
