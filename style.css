@@ -145,13 +145,19 @@ main {
   padding: 20px 20px;
 }
 
+/* Stlizzo categorie prodotti */
+
+.cat{
+  width: 100%;
+}
+
 .cat h2 {
   font-size: 20px;
   margin-bottom: 20px;
   text-align: justify;
 }
 
-/* lavoro sulle card */
+/* lavoro sulle card di prodotti*/
 
 .card {
   display: inline-block;
@@ -231,6 +237,10 @@ main {
 }
 
 /* lavoro sui prodotti in evidenza */
+
+.prodotti{
+  width: 100%;
+}
 
 .prodotti h2{
   margin-bottom: 15px;
